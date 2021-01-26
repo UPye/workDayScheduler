@@ -40,12 +40,12 @@ $("textarea").each(function() {
         $(this).removeClass("present");
         $(this).removeClass("future");
 
-        // // Get data from the localStorage
-        // if (calendarTime >= 9 && calendarTime <= 11){
-        //     $(this).val(calendarTime + "AM");        
-        // } else {
-        //     $(this).val(calendarTime + "PM");
-        // }
+        // Get data from the localStorage
+        if (calendarTime >= 9 && calendarTime <= 11){
+            $(this).val(calendarTime + "AM");        
+        } else {
+            $(this).val(calendarTime + "PM");
+        } */
         if (calendarTime < currentTime) {
             $(this).addClass("past");
         }

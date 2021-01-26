@@ -35,17 +35,17 @@ var updateInfo = function () {
 
 // Check if task is in the past, present, or future
 $("textarea").each(function() {
-    var calendarTime = parseInt($(this).attr("data-id"));
+    var calendarTime = parseInt($(this).attr-id);
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).removeClass("future");
 
-        // // Get data from the localStorage
-        // if (calendarTime >= 9 && calendarTime <= 11){
-        //     $(this).val(calendarTime + "AM");        
-        // } else {
-        //     $(this).val(calendarTime + "PM");
-        // }
+        // Get data from the localStorage
+        if (calendarTime >= 9 && calendarTime <= 11){
+            $(this).val(calendarTime + "AM");        
+        } else {
+            $(this).val(calendarTime + "PM");
+        }
         if (calendarTime < currentTime) {
             $(this).addClass("past");
         }
